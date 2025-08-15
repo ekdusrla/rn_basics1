@@ -1,4 +1,4 @@
-import { Image, ScrollView, StyleSheet, Text, TextInput } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 // View : 전체 감싸는 컨테이너
 // Text : 텍스트 표시 컴포넌트 
@@ -9,9 +9,9 @@ import { Image, ScrollView, StyleSheet, Text, TextInput } from "react-native";
 // - contain : 이미지 원본 따라 , cover : 지정 사이즈 따라 
 
 export default function Index() {
-  return (
+  return (  
     <>
-    <ScrollView
+    {/*<ScrollView
       style={styles.scrollView}
     >
       <Text style = {styles.mainText}>Hello world.</Text>
@@ -27,7 +27,13 @@ export default function Index() {
         3절 가을 하늘 공활한데 높고 구름 없이 밝은 달은 우리 가슴 일편단심 일세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
         4절 이 기상과 이 맘으로 충성을 다 하여 괴로우나 즐거우나 나라 사랑하게 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
         </Text>
-    </ScrollView>
+    </ScrollView>*/}
+    <View style={[styles.container2,]}>
+      <View style={{flex: 1, backgroundColor: 'pink'}} />
+      <View style={{flex: 1, width:200, backgroundColor: 'orange'}} />
+      <View style={{flex: 1, backgroundColor: 'green'}} />
+    
+    </View>
     </>
   );  
 }
@@ -64,5 +70,12 @@ const styles = StyleSheet.create({
   },
   text: {  
     fontSize: 40,
+  },
+  container2: {
+    flex: 1,
+    padding: 20,
+    flexDirection: 'column',
+    //alignItems: "center",
+    //justifyContent: "center",
   },
 });
